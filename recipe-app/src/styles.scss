@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background: #FBFBFB;
+}
+
+#wrapper {
+  max-width: 1180px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+}
+
+#recipe__list,
+#recipe__description {
+  border: 1px solid #EBE1E1;
+  header {
+    height: 64px;
+    padding: 0 16px;
+    margin-left: -1px;
+    border-bottom: 1px solid #EBE1E1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span:first-child {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      color: #1B283C;
+    }
+    span i {
+      margin-left: 16px;
+    }
+    i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  main {
+    ul#recipe__listing {
+		margin-bottom: 0;
+      li {
+        height: 48px;
+        padding: 0 16px;
+        list-style: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #EBE1E1;
+        &:hover {
+          background: rgb(250, 250, 255);
+          span:last-child {
+            opacity: 1;
+          }
+        }
+        span  {
+          cursor: pointer;
+          transition: 0.3s linear;
+          i {
+            cursor: pointer;
+            &:last-child {
+              margin-left: 16px;
+            }
+          }
+          &:last-child {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+div#recipe__listing__empty {
+  width: 100%;
+  height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  svg {
+	width: 200px;
+	height: 240px;
+  }
+}
+
+#recipe__description {
+  margin-left: -1px;
+  main {
+    padding: 16px;
+    ul {
+      padding-left: 16px;
+      li {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
